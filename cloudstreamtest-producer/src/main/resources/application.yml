@@ -1,0 +1,6 @@
+spring.cloud:
+  stream:
+    function.definition: generate
+    bindings:
+      generate-out-0:
+        destination: input_topic

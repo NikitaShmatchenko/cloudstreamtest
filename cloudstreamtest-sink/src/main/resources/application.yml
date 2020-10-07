@@ -1,0 +1,6 @@
+spring.cloud:
+  stream:
+    function.definition: print
+    bindings:
+      print-in-0:
+        destination: output_topic
