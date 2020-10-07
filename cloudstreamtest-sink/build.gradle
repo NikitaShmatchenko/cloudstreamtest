@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'war'
 }
 
 group 'com.nshm.cloudstreamtest.sink'
@@ -18,7 +19,13 @@ ext {
 
 dependencies {
     compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: springBootVersion
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: springBootVersion
     compile group: 'org.springframework.cloud', name: 'spring-cloud-stream', version: springCloudVersion
     compile group: 'org.springframework.cloud', name: 'spring-cloud-stream-binder-kafka', version: springCloudVersion
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: springBootVersion
+    compile group: 'org.postgresql', name: 'postgresql', version: '42.2.16'
+    providedCompile group: 'org.projectlombok', name: 'lombok', version: '1.18.12'
+    testCompile('org.springframework.cloud:spring-cloud-stream:${springCloudVersion}:test-binder')
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: springBootVersion
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }

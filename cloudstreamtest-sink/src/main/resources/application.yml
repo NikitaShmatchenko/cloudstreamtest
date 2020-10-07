@@ -1,6 +1,19 @@
-spring.cloud:
-  stream:
-    function.definition: print
-    bindings:
-      print-in-0:
-        destination: output_topic
+spring:
+  cloud:
+    stream:
+      function.definition: persist
+      bindings:
+        persist-in-0:
+          destination: output_topic
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: 1234
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        default_schema: public
+    hibernate:
+      ddl-auto: create-drop
