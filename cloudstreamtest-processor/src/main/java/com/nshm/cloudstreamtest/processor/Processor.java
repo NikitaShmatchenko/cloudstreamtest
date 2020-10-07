@@ -16,7 +16,7 @@ public class Processor {
     }
 
     @Bean
-    public Function<String, String> reverse() {
+    public Function<String, String> process() {
         return str -> str + POSTFIX;
     }
 }

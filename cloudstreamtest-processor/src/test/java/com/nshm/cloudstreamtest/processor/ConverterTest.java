@@ -29,7 +29,7 @@ public class ConverterTest {
     private static final String OUTPUT_TOPIC = "output_topic";
     private static final String GROUP_NAME = "test";
     private static final String MESSAGE = "abc";
-    private static final String MODIFIED_PREFIX = "-modified";
+    private static final String MODIFIED_PREFIX = "-processed";
 
     @ClassRule
     public static EmbeddedKafkaRule embeddedKafka = new EmbeddedKafkaRule(1, true, OUTPUT_TOPIC);
