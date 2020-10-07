@@ -18,6 +18,7 @@ ext {
 
 dependencies {
     compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: springBootVersion
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: springBootVersion
     compile group: 'org.springframework.cloud', name: 'spring-cloud-stream', version: springCloudVersion
     compile ('org.springframework.cloud:spring-cloud-stream:${springCloudVersion}:test-binder')
     compile group: 'org.springframework.cloud', name: 'spring-cloud-stream-binder-kafka', version: springCloudVersion

@@ -1,6 +1,6 @@
 spring.cloud:
   stream:
-    function.definition: generate
+    function.definition: produce
     bindings:
-      generate-out-0:
+      produce-out-0:
         destination: input_topic
